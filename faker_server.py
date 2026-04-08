@@ -20,7 +20,7 @@ try:
             if request == 'name':
                 response = f"【komisinn Bot】こんにちは、{fake.name()} さん！"
             elif request == 'address':
-                response = f"Address: {fake.address()}"
+                response = f"【komisinn Bot】住所は {fake.address()} です！"
             elif request == 'email':
                 response = f"【komisinn Bot】メールアドレスは {fake.email()} です！"
             elif request == 'exit':
