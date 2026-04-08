@@ -18,13 +18,15 @@ try:
             request = data.decode('utf-8').strip().lower()
             # 入力内容に応じてFakerを使い分ける
             if request == 'name':
-                response = f"Name: {fake.name()}"
+                response = f"【komisinn Bot】こんにちは、{fake.name()} さん！"
             elif request == 'address':
                 response = f"Address: {fake.address()}"
             elif request == 'email':
-                response = f"Email: {fake.email()}"
+                response = f"【komisinn Bot】メールアドレスは {fake.email()} です！"
+            elif request == 'exit':
+                response = "【komisinn Bot】さようなら！またね！"
             else:
-                response = "Try: name, address, or email"
+                response = "【komisinn Bot】「name」「address」「email」のどれかを入力してね！"
             
             sock.sendto(response.encode('utf-8'), address)
 finally:
